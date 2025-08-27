@@ -1,12 +1,34 @@
+/* Modern WHMCS OAuth - Updated with gradient blue-purple theme */
+
+:root {
+    --primary-gradient: linear-gradient(135deg, #4A90E2 0%, #7B68EE 100%);
+    --primary-color: #4A90E2;
+    --text-primary: #2C3E50;
+    --text-secondary: #6C757D;
+    --text-light: #FFFFFF;
+    --bg-light: #F8FAFC;
+    --bg-white: #FFFFFF;
+    --border-color: #E2E8F0;
+    --border-radius: 12px;
+    --border-radius-sm: 8px;
+    --shadow-sm: 0 2px 4px rgba(0, 0, 0, 0.05);
+    --shadow-md: 0 4px 12px rgba(0, 0, 0, 0.1);
+    --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
 body {
-    background-color: #efefef;
+    background: var(--bg-light);
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    color: var(--text-primary);
 }
 
 section#header {
     margin: 0;
     padding: 15px 0;
-    border-bottom: 1px solid #ccc;
+    border-bottom: 1px solid var(--border-color);
     font-size: 0.8em;
+    background: var(--bg-white);
+    box-shadow: var(--shadow-sm);
 }
 
 section#content {
@@ -18,15 +40,17 @@ section#footer {
     padding: 10px;
     font-size: 0.8em;
     text-align: center;
+    color: var(--text-secondary);
 }
 
 .content-container {
     margin: 0 auto;
     padding: 10px;
     max-width: 550px;
-    background-color: #fff;
-    border-radius: 6px;
-
+    background-color: var(--bg-white);
+    border-radius: var(--border-radius);
+    box-shadow: var(--shadow-md);
+    border: 1px solid var(--border-color);
 }
 
 .app-logo {
@@ -43,14 +67,41 @@ section#footer {
 .content-padded {
     margin: 0;
     padding: 30px 50px;
+    background: var(--bg-white);
 }
 
 .action-buttons {
     margin: 10px 0 0 0;
     padding: 10px;
-    border-top: 1px solid #ccc;
-    background-color: #efefef;
+    border-top: 1px solid var(--border-color);
+    background-color: var(--bg-light);
     text-align: right;
     font-size: 0.9em;
-    border-radius: 0 0 6px 6px;
+    border-radius: 0 0 var(--border-radius) var(--border-radius);
+}
+
+.action-buttons .btn {
+    background: var(--primary-gradient);
+    border: none;
+    color: var(--text-light);
+    border-radius: var(--border-radius-sm);
+    transition: var(--transition);
+    font-weight: 500;
+}
+
+.action-buttons .btn:hover {
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-sm);
+}
+
+.action-buttons .btn-secondary {
+    background: var(--bg-white);
+    border: 2px solid var(--border-color);
+    color: var(--text-primary);
+}
+
+.action-buttons .btn-secondary:hover {
+    background: var(--primary-color);
+    color: var(--text-light);
+    border-color: var(--primary-color);
 }

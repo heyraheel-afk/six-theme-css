@@ -6,3 +6,101 @@
     defined here.
 
 ***************************************************** */
+
+/* Modern WHMCS Six Theme - Custom Styles */
+
+:root {
+    --primary-gradient: linear-gradient(135deg, #4A90E2 0%, #7B68EE 100%);
+    --primary-color: #4A90E2;
+    --secondary-color: #7B68EE;
+    --accent-color: #6C7CE7;
+    --text-primary: #2C3E50;
+    --text-secondary: #6C757D;
+    --text-light: #FFFFFF;
+    --bg-light: #F8FAFC;
+    --bg-white: #FFFFFF;
+    --border-color: #E2E8F0;
+    --border-radius: 12px;
+    --border-radius-sm: 8px;
+    --shadow-sm: 0 2px 4px rgba(0, 0, 0, 0.05);
+    --shadow-md: 0 4px 12px rgba(0, 0, 0, 0.1);
+    --shadow-lg: 0 8px 24px rgba(0, 0, 0, 0.15);
+    --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* Custom modern enhancements */
+.modern-card {
+    background: var(--bg-white);
+    border: 1px solid var(--border-color);
+    border-radius: var(--border-radius);
+    box-shadow: var(--shadow-sm);
+    transition: var(--transition);
+}
+
+.modern-card:hover {
+    box-shadow: var(--shadow-md);
+    transform: translateY(-2px);
+}
+
+.modern-button {
+    background: var(--primary-gradient);
+    border: none;
+    color: var(--text-light);
+    border-radius: var(--border-radius-sm);
+    transition: var(--transition);
+    font-weight: 500;
+}
+
+.modern-button:hover {
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-md);
+    color: var(--text-light);
+}
+
+.modern-input {
+    border: 2px solid var(--border-color);
+    border-radius: var(--border-radius-sm);
+    transition: var(--transition);
+}
+
+.modern-input:focus {
+    border-color: var(--primary-color);
+    box-shadow: 0 0 0 3px rgba(74, 144, 226, 0.1);
+    outline: none;
+}
+
+/* Custom animations */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.fade-in-up {
+    animation: fadeInUp 0.6s ease-out;
+}
+
+/* Custom utility classes */
+.text-gradient {
+    background: var(--primary-gradient);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    font-weight: 700;
+}
+
+.bg-gradient {
+    background: var(--primary-gradient);
+}
+
+.border-gradient {
+    border: 2px solid transparent;
+    background: linear-gradient(var(--bg-white), var(--bg-white)) padding-box,
+                var(--primary-gradient) border-box;
+    border-radius: var(--border-radius-sm);
+}

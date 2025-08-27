@@ -1,5 +1,0 @@
-/*!
- * FullCalendar v2.1.1 Stylesheet - Modern Theme
- * Docs & License: http://arshaw.com/fullcalendar/
- * (c) 2013 Adam Shaw
- */.fc{direction:ltr;text-align:left;font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;color:#2C3E50}.fc-rtl{text-align:right}body .fc{font-size:1em}.fc-unthemed .fc-popover,.fc-unthemed .fc-row,.fc-unthemed hr,.fc-unthemed tbody,.fc-unthemed td,.fc-unthemed th,.fc-unthemed thead{border-color:#E2E8F0}.fc-unthemed .fc-popover{background-color:#FFFFFF;border-radius:12px;box-shadow:0 8px 24px rgba(0,0,0,0.15)}.fc-unthemed .fc-popover .fc-header,.fc-unthemed hr{background:#F8FAFC}.fc-unthemed .fc-popover .fc-header .fc-close{color:#6C757D;transition:all 0.3s cubic-bezier(0.4,0,0.2,1)}.fc-unthemed .fc-popover .fc-header .fc-close:hover{color:#4A90E2}.fc-unthemed .fc-today{background:linear-gradient(135deg,rgba(74,144,226,0.1) 0%,rgba(123,104,238,0.1) 100%)}.fc-highlight{background:rgba(74,144,226,0.2);opacity:.3;filter:alpha(opacity=30)}

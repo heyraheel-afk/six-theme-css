@@ -20,6 +20,8 @@ body {
     background: var(--bg-light);
     font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
     color: var(--text-primary);
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    color: var(--text-primary);
 }
 
 section#header {
@@ -27,6 +29,8 @@ section#header {
     padding: 15px 0;
     border-bottom: 1px solid var(--border-color);
     font-size: 0.8em;
+    background: var(--bg-white);
+    box-shadow: var(--shadow-sm);
     background: var(--bg-white);
     box-shadow: var(--shadow-sm);
 }
@@ -40,6 +44,7 @@ section#footer {
     padding: 10px;
     font-size: 0.8em;
     text-align: center;
+    color: var(--text-secondary);
     color: var(--text-secondary);
 }
 
@@ -68,6 +73,7 @@ section#footer {
     margin: 0;
     padding: 30px 50px;
     background: var(--bg-white);
+    background: var(--bg-white);
 }
 
 .action-buttons {
@@ -78,12 +84,33 @@ section#footer {
     text-align: right;
     font-size: 0.9em;
     border-radius: 0 0 var(--border-radius) var(--border-radius);
+    border-radius: 0 0 var(--border-radius) var(--border-radius);
 }
 
 .action-buttons .btn {
     background: var(--primary-gradient);
     border: none;
     color: var(--text-light);
+    border-radius: var(--border-radius-sm);
+    transition: var(--transition);
+    font-weight: 500;
+}
+
+.action-buttons .btn:hover {
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-sm);
+}
+
+.action-buttons .btn-secondary {
+    background: var(--bg-white);
+    border: 2px solid var(--border-color);
+    color: var(--text-primary);
+}
+
+.action-buttons .btn-secondary:hover {
+    background: var(--primary-color);
+    color: var(--text-light);
+    border-color: var(--primary-color);
     border-radius: var(--border-radius-sm);
     transition: var(--transition);
     font-weight: 500;

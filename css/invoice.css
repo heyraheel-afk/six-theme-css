@@ -3,6 +3,7 @@
 :root {
     --primary-gradient: linear-gradient(135deg, #4A90E2 0%, #7B68EE 100%);
     --primary-color: #4A90E2;
+    --secondary-color: #7B68EE;
     --text-primary: #2C3E50;
     --text-secondary: #6C757D;
     --text-light: #FFFFFF;

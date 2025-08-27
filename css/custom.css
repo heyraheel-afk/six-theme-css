@@ -9,15 +9,23 @@
 
 /* Modern WHMCS Six Theme - Custom Styles */
 
-/* Ensure proper inheritance */
-html {
-    font-size: 14px;
-    line-height: 1.428571429;
-}
-
-body {
-    margin: 0;
-    padding: 0;
+:root {
+    --primary-gradient: linear-gradient(135deg, #4A90E2 0%, #7B68EE 100%);
+    --primary-color: #4A90E2;
+    --secondary-color: #7B68EE;
+    --accent-color: #6C7CE7;
+    --text-primary: #2C3E50;
+    --text-secondary: #6C757D;
+    --text-light: #FFFFFF;
+    --bg-light: #F8FAFC;
+    --bg-white: #FFFFFF;
+    --border-color: #E2E8F0;
+    --border-radius: 12px;
+    --border-radius-sm: 8px;
+    --shadow-sm: 0 2px 4px rgba(0, 0, 0, 0.05);
+    --shadow-md: 0 4px 12px rgba(0, 0, 0, 0.1);
+    --shadow-lg: 0 8px 24px rgba(0, 0, 0, 0.15);
+    --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 /* Fix any layout issues */
@@ -115,53 +123,6 @@ body {
     background: linear-gradient(135deg, #F59E0B 0%, #D97706 100%);
     color: white;
     border: none;
-}
-
-/* Fix main layout structure */
-#wrapper {
-    position: relative;
-    min-height: 100vh;
-    width: 100%;
-}
-
-/* Ensure proper stacking order */
-.navbar {
-    position: relative;
-    z-index: 1000;
-}
-
-.main-content,
-#main-content,
-section#main-body {
-    position: relative;
-    z-index: 1;
-    width: 100%;
-    clear: both;
-}
-
-/* Fix sidebar if present */
-.sidebar {
-    position: relative;
-    z-index: 10;
-}
-
-:root {
-    --primary-gradient: linear-gradient(135deg, #4A90E2 0%, #7B68EE 100%);
-    --primary-color: #4A90E2;
-    --secondary-color: #7B68EE;
-    --accent-color: #6C7CE7;
-    --text-primary: #2C3E50;
-    --text-secondary: #6C757D;
-    --text-light: #FFFFFF;
-    --bg-light: #F8FAFC;
-    --bg-white: #FFFFFF;
-    --border-color: #E2E8F0;
-    --border-radius: 12px;
-    --border-radius-sm: 8px;
-    --shadow-sm: 0 2px 4px rgba(0, 0, 0, 0.05);
-    --shadow-md: 0 4px 12px rgba(0, 0, 0, 0.1);
-    --shadow-lg: 0 8px 24px rgba(0, 0, 0, 0.15);
-    --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 /* Custom modern enhancements */

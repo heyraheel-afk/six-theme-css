@@ -31,6 +31,7 @@ body {
     display: none;
     overflow: hidden;
     outline: 0;
+    background: rgba(0, 0, 0, 0.5);
 }
 
 .modal.fade .modal-dialog {
@@ -46,6 +47,8 @@ body {
     position: relative;
     width: auto;
     margin: 10px;
+    max-width: 600px;
+    margin: 30px auto;
 }
 
 .modal-content {
@@ -55,17 +58,20 @@ body {
     border-radius: var(--border-radius);
     box-shadow: var(--shadow-lg);
     outline: 0;
+    width: 100%;
 }
 
 .modal-header {
     padding: 15px;
     border-bottom: 1px solid var(--border-color);
     border-radius: var(--border-radius) var(--border-radius) 0 0;
+    background: var(--bg-white);
 }
 
 .modal-body {
     position: relative;
     padding: 15px;
+    background: var(--bg-white);
 }
 
 .modal-footer {
@@ -73,6 +79,7 @@ body {
     text-align: right;
     border-top: 1px solid var(--border-color);
     border-radius: 0 0 var(--border-radius) var(--border-radius);
+    background: var(--bg-light);
 }
 
 /* Fix alert positioning */
@@ -82,30 +89,60 @@ body {
     margin-bottom: 20px;
     border: 1px solid transparent;
     border-radius: var(--border-radius-sm);
+    width: 100%;
+    box-sizing: border-box;
 }
 
 .alert-danger {
-    color: #721c24;
-    background-color: #f8d7da;
-    border-color: #f5c6cb;
+    background: linear-gradient(135deg, #EF4444 0%, #DC2626 100%);
+    color: white;
+    border: none;
 }
 
 .alert-success {
-    color: #155724;
-    background-color: #d4edda;
-    border-color: #c3e6cb;
+    background: linear-gradient(135deg, #10B981 0%, #059669 100%);
+    color: white;
+    border: none;
 }
 
 .alert-info {
-    color: #0c5460;
-    background-color: #d1ecf1;
-    border-color: #bee5eb;
+    background: var(--primary-gradient);
+    color: white;
+    border: none;
 }
 
 .alert-warning {
-    color: #856404;
-    background-color: #fff3cd;
-    border-color: #ffeaa7;
+    background: linear-gradient(135deg, #F59E0B 0%, #D97706 100%);
+    color: white;
+    border: none;
+}
+
+/* Fix main layout structure */
+#wrapper {
+    position: relative;
+    min-height: 100vh;
+    width: 100%;
+}
+
+/* Ensure proper stacking order */
+.navbar {
+    position: relative;
+    z-index: 1000;
+}
+
+.main-content,
+#main-content,
+section#main-body {
+    position: relative;
+    z-index: 1;
+    width: 100%;
+    clear: both;
+}
+
+/* Fix sidebar if present */
+.sidebar {
+    position: relative;
+    z-index: 10;
 }
 
 :root {

@@ -77,6 +77,9 @@ h6 {
     font-size: 15px;
     box-shadow: var(--shadow-sm);
     transition: var(--transition);
+    position: relative;
+    z-index: 200;
+    width: 100%;
 }
 .navbar-main li.account {
     background: rgba(255, 255, 255, 0.1);
@@ -107,6 +110,9 @@ h6 {
 
 #main-menu .navbar-nav {
     margin: 0;
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
 }
 
 .navbar-main .dropdown-menu {
@@ -129,6 +135,7 @@ h6 {
     border-radius: var(--border-radius-sm);
 }
 
+/* Fix mobile navigation */
 @media (max-width: 767px) {
     .navbar-main .navbar-nav .open .dropdown-menu > li > a {
         color: rgba(255, 255, 255, 0.8);
@@ -136,6 +143,25 @@ h6 {
     .navbar-main .navbar-nav .open .dropdown-menu > li > a:hover {
         color: var(--text-light);
         background: rgba(255, 255, 255, 0.1);
+    }
+    
+    .navbar-main .navbar-collapse {
+        position: relative;
+        z-index: 300;
+        background: var(--primary-gradient);
+        margin: 0 -15px;
+        padding: 0 15px;
+    }
+    
+    .navbar-main .navbar-nav {
+        margin: 0;
+        display: block;
+    }
+    
+    .navbar-main .navbar-nav > li {
+        float: none;
+        display: block;
+        width: 100%;
     }
 }
 

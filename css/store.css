@@ -1,0 +1,329 @@
+@@ .. @@
++/* Modern WHMCS Store - Updated with gradient blue-purple theme */
++
++:root {
++    --primary-gradient: linear-gradient(135deg, #4A90E2 0%, #7B68EE 100%);
++    --primary-color: #4A90E2;
++    --secondary-color: #7B68EE;
++    --text-primary: #2C3E50;
++    --text-secondary: #6C757D;
++    --text-light: #FFFFFF;
++    --bg-light: #F8FAFC;
++    --bg-white: #FFFFFF;
++    --border-color: #E2E8F0;
++    --border-radius: 12px;
++    --border-radius-sm: 8px;
++    --shadow-sm: 0 2px 4px rgba(0, 0, 0, 0.05);
++    --shadow-md: 0 4px 12px rgba(0, 0, 0, 0.1);
++    --shadow-lg: 0 8px 24px rgba(0, 0, 0, 0.15);
++    --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
++}
++
+ section#main-body {
+     margin: 0;
+     padding: 0;
++    background: var(--bg-light);
+ }
+ 
+ .landing-page h1,
+@@ .. @@
+ .landing-page h5,
+ .landing-page h6 {
+     font-weight: 300;
++    color: var(--text-primary);
+ }
+ 
+ .landing-page img {
+     max-width: 100%;
++    border-radius: var(--border-radius-sm);
+ }
+ 
+ .landing-page .hero {
+     padding: 60px 0;
+     text-align: center;
+-    color: #333;
++    color: var(--text-primary);
++    background: var(--bg-white);
++    border-radius: var(--border-radius);
+ }
+ .landing-page .hero h2 {
+     margin: 0 0 15px 0;
+@@ .. @@
+ .landing-page .product-options {
+     padding: 40px 0 20px;
+     text-align: center;
++    background: var(--bg-light);
++    border-radius: var(--border-radius);
+ }
+ 
+ .landing-page.mail-services .product-options {
+-    background-color: #00acd4;
++    background: var(--primary-gradient);
+ }
+ 
+ .landing-page.mail-services .product-options .preview-text {
+     padding: 50px;
+-    color: #fff;
++    color: var(--text-light);
+ }
+ 
+ .landing-page .product-options h2 {
+@@ .. @@
+     padding: 0;
+     font-weight: 300;
+     font-size: 2.8em;
+-    color: #fff;
++    color: var(--text-light);
+ }
+ .landing-page .product-options h3 {
+     margin: 0;
+     padding: 0;
+     font-weight: 300;
+     font-size: 2.4em;
+-    color: #fff;
++    color: var(--text-light);
+ }
+ .landing-page .product-options .item {
+     margin: 0 0 20px 0;
+     padding: 30px;
+-    background-color: #fff;
+-    border-radius: 4px;
++    background-color: var(--bg-white);
++    border-radius: var(--border-radius);
++    box-shadow: var(--shadow-sm);
++    transition: var(--transition);
++}
++
++.landing-page .product-options .item:hover {
++    box-shadow: var(--shadow-md);
++    transform: translateY(-4px);
+ }
+ .landing-page .product-options h4 {
+     margin: 0;
+     font-size: 1.4em;
+     font-weight: 300;
++    color: var(--text-primary);
+ }
+ .landing-page .product-options .icon {
+     line-height: 80px;
+     font-size: 50px;
+-    color: #ccc;
++    color: var(--primary-color);
+ }
+ .landing-page .product-options img {
+     margin: 20px 0;
+@@ .. @@
+ .landing-page .product-options span {
+     display: block;
+     font-size: 1.2em;
++    color: var(--text-primary);
+ }
+ .landing-page .product-options p {
+     margin: 10px 0;
+-    color: #555;
++    color: var(--text-secondary);
+ }
+ .landing-page .product-options .price {
+     margin: 10px 0;
+     font-size: 1.1em;
+-    color: #444;
++    color: var(--primary-color);
++    font-weight: 600;
+ }
+ .landing-page .product-options .item .btn {
+     padding: 6px 20px;
+-    background-color: #989898;
+-    color: #eee;
++    background: var(--primary-gradient);
++    color: var(--text-light);
++    border: none;
++    border-radius: var(--border-radius-sm);
++    transition: var(--transition);
++}
++
++.landing-page .product-options .item .btn:hover {
++    transform: translateY(-2px);
++    box-shadow: var(--shadow-sm);
+ }
+ 
+ .landing-page.mail-services .product-options .item {
+-    background-color: #f0fcff;
++    background-color: rgba(74, 144, 226, 0.05);
+ }
+ .landing-page.mail-services .product-options .icon {
+-    color: #00acd4;
++    color: var(--primary-color);
+ }
+ .landing-page.mail-services .product-options .btn-buy {
+-    background-color: #00acd4;
++    background: var(--primary-gradient);
+ }
+ .landing-page.mail-services .product-options .price {
+-    color: #00acd4;
++    color: var(--primary-color);
+ }
+ 
+ .landing-page .product-options .powered-by {
+     text-align: right;
+-    color: #fff;
++    color: var(--text-light);
+     font-size: 0.9em;
+ }
+ .landing-page .product-options .powered-by img {
+@@ .. @@
+ .landing-page .navbar {
+     border-left: 0;
+     border-right: 0;
+-    border-radius: 0;
++    border-radius: var(--border-radius);
++    background: var(--bg-white);
++    box-shadow: var(--shadow-sm);
+ }
+ @media (min-width: 768px) {
+     .landing-page .navbar .navbar-nav {
+@@ .. @@
+ .landing-page .navbar .navbar-nav > li > a {
+     font-size: 14px;
+     text-align: center;
+-    border-bottom: 1px solid #eee;
++    border-bottom: 1px solid var(--border-color);
++    color: var(--text-primary);
++    transition: var(--transition);
++}
++
++.landing-page .navbar .navbar-nav > li > a:hover {
++    color: var(--primary-color);
++    background: rgba(74, 144, 226, 0.1);
+ }
+ 
+ @media (min-width: 992px) {
+@@ .. @@
+     }
+     .landing-page .navbar .navbar-nav > li > a {
+-        border-left: 1px solid #ccc;
++        border-left: 1px solid var(--border-color);
+     }
+     .landing-page .navbar .navbar-nav > li:last-child > a {
+-        border-right: 1px solid #ccc;
++        border-right: 1px solid var(--border-color);
+     }
+ }
+ 
+ .landing-page .navbar .navbar-nav > li.active > a {
+-    background: #fff;
++    background: var(--primary-gradient);
++    color: var(--text-light);
++    border-radius: var(--border-radius-sm);
+ }
+ 
+ .landing-page .content-block {
+     margin: 40px 0;
+     padding: 40px 0;
++    background: var(--bg-white);
++    border-radius: var(--border-radius);
+ }
+ .landing-page .text13 {
+     font-size: 1.3em;
+@@ .. @@
+ }
+ 
+ .landing-page .light-grey-bg {
+-    background-color: #f6f6f6;
+-    color: #222;
++    background-color: var(--bg-light);
++    color: var(--text-primary);
++    border-radius: var(--border-radius);
+ }
+ .landing-page .get-started {
+-    background-color: #00acd4;
+-    color: #fff;
++    background: var(--primary-gradient);
++    color: var(--text-light);
++    border-radius: var(--border-radius);
+ }
+ 
+ .landing-page.mail-services .light-grey-bg {
+@@ .. @@
+ .landing-page .get-started .btn-order-now {
+-    background-color: #28798e;
+-    color: #fff;
++    background: var(--secondary-color);
++    color: var(--text-light);
++    border: none;
++    border-radius: var(--border-radius-sm);
++    transition: var(--transition);
++}
++
++.landing-page .get-started .btn-order-now:hover {
++    transform: translateY(-2px);
++    box-shadow: var(--shadow-md);
+ }
+ .landing-page .get-started .price:not(:first-child) {
+     display: none;
+@@ .. @@
+ 
+ .landing-page .nav-tabs {
+     border: 0;
++    background: var(--bg-white);
++    border-radius: var(--border-radius) var(--border-radius) 0 0;
+ }
+ .landing-page .nav-tabs > li {
+     margin-right: 5px;
+ }
+ .landing-page .nav-tabs > li > a,
+ .landing-page .nav-tabs > li > a:focus {
+-    background-color: #efefef;
++    background-color: var(--bg-light);
+     border: 0;
++    border-radius: var(--border-radius-sm) var(--border-radius-sm) 0 0;
++    transition: var(--transition);
+ }
+ .landing-page .nav-tabs > li > a:hover {
+-    background-color: #f2f2f2;
++    background: rgba(74, 144, 226, 0.1);
+     border: 0;
+ }
+ .landing-page .nav-tabs > li.active > a,
+ .landing-page .nav-tabs > li.active > a:focus,
+ .landing-page .nav-tabs > li.active > a:hover {
+-    background-color: #fff;
++    background-color: var(--bg-white);
+     border: 0;
+-    border-top: 3px solid #2cc9f2;
++    border-top: 3px solid var(--primary-color);
+ }
+ 
+ .landing-page .tab-content {
+     padding: 30px;
+-    background-color: #fff;
++    background-color: var(--bg-white);
++    border-radius: 0 0 var(--border-radius) var(--border-radius);
+ }
+ .landing-page .tab-content h1,
+ .landing-page .tab-content h2,
+@@ .. @@
+ .landing-page .tab-content h6 {
+     margin: 0 0 10px 0;
++    color: var(--text-primary);
+ }
+ .landing-page .tab-content p {
+     margin: 0 0 16px 0;
++    color: var(--text-secondary);
+ }
+ 
+ .landing-page.mail-services .benefits {
+     margin: 0 0 30px 0;
+     padding: 20px;
+     font-size: 1.1em;
+-    background: rgba(44, 201, 242, 0.05);
+-    border-radius: 6px;
++    background: rgba(74, 144, 226, 0.1);
++    border-radius: var(--border-radius);
++    border-left: 4px solid var(--primary-color);
+ }
+ .landing-page.mail-services .benefits i {
+-    color: #33993c;
++    color: #10B981;
+     font-size: 1.5em;
+     padding-right: 5px;
+ }

@@ -12,7 +12,7 @@
 .irs-bar,
 .irs-bar-edge,
 .irs-slider {
-    background: url(../img/sprite-skin-simple.png) repeat-x;
+    background: linear-gradient(135deg, #4A90E2 0%, #7B68EE 100%);
 }
 
 .irs {
@@ -23,80 +23,94 @@
 }
 .irs-line {
     height: 6px; top: 25px;
+    background: #F8FAFC;
+    border-radius: 8px;
 }
     .irs-line-left {
         height: 6px;
-        background-position: 0 -30px;
+        background: #F8FAFC;
+        border-radius: 8px 0 0 8px;
     }
     .irs-line-mid {
         height: 6px;
-        background-position: 0 0;
+        background: #F8FAFC;
     }
     .irs-line-right {
         height: 6px;
-        background-position: 100% -30px;
+        background: #F8FAFC;
+        border-radius: 0 8px 8px 0;
     }
 
 .irs-bar {
     height: 6px; top: 25px;
-    background-position: 0 -60px;
+    background: linear-gradient(135deg, #4A90E2 0%, #7B68EE 100%);
+    border-radius: 8px;
 }
     .irs-bar-edge {
         top: 25px;
         height: 6px; width: 7px;
-        background-position: 0 -90px;
+        background: linear-gradient(135deg, #4A90E2 0%, #7B68EE 100%);
+        border-radius: 8px 0 0 8px;
     }
 
 .irs-shadow {
     height: 1px; top: 34px;
-    background: #000;
+    background: rgba(74, 144, 226, 0.3);
     opacity: 0.75;
+    border-radius: 8px;
 }
 .lt-ie9 .irs-shadow {
     filter: alpha(opacity=75);
 }
 
 .irs-slider {
-    width: 8px; height: 15px;
+    width: 12px; height: 12px;
     top: 21px;
-    background-position: 0 -120px;
+    background: #FFFFFF;
+    border: 2px solid #4A90E2;
+    border-radius: 50%;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 }
 .irs-slider.state_hover, .irs-slider:hover {
-    background-position: 0 -150px;
+    transform: scale(1.1);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    border-color: #7B68EE;
 }
 
 .irs-min, .irs-max {
-    color: #c0c0c0;
-    font-size: 10px; line-height: 1.333;
+    color: #6C757D;
+    font-size: 12px; line-height: 1.333;
     text-shadow: none;
-    top: 0; padding: 1px 3px;
-    background: rgba(0,0,0,0.1);
-    -moz-border-radius: 3px;
-    border-radius: 3px;
+    top: 0; padding: 4px 8px;
+    background: #F8FAFC;
+    border-radius: 8px;
+    border: 1px solid #E2E8F0;
 }
 .lt-ie9 .irs-min, .lt-ie9 .irs-max {
-    background: #3654b0;
+    background: #4A90E2;
 }
 
 .irs-from, .irs-to, .irs-single {
-    color: #000;
-    font-size: 10px; line-height: 1.333;
+    color: #FFFFFF;
+    font-size: 12px; line-height: 1.333;
     text-shadow: none;
-    padding: 1px 5px;
-    background: rgba(255,255,255,0.8);
-    -moz-border-radius: 3px;
-    border-radius: 3px;
+    padding: 4px 8px;
+    background: linear-gradient(135deg, #4A90E2 0%, #7B68EE 100%);
+    border-radius: 8px;
+    font-weight: 500;
 }
 .lt-ie9 .irs-from, .lt-ie9 .irs-to, .lt-ie9 .irs-single {
-    background: #d8dff3;
+    background: #4A90E2;
 }
 
 .irs-grid-pol {
-    background: #777;
+    background: #6C757D;
 }
 .irs-grid-text {
-    color: #e0e0e0;
+    color: #6C757D;
 }
 
 .irs-disabled {
+    opacity: 0.5;
 }

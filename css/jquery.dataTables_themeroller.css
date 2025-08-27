@@ -7,6 +7,11 @@ table.dataTable {
   clear: both;
   border-collapse: separate;
   border-spacing: 0;
+  background: #FFFFFF;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
   /*
    * Header and footer styles
    */
@@ -19,10 +24,12 @@ table.dataTable thead td,
 table.dataTable tfoot th,
 table.dataTable tfoot td {
   padding: 4px 10px;
+  color: #2C3E50;
 }
 table.dataTable thead th,
 table.dataTable tfoot th {
   font-weight: bold;
+  color: #2C3E50;
 }
 table.dataTable thead th:active,
 table.dataTable thead td:active {
@@ -33,6 +40,13 @@ table.dataTable thead .sorting_desc,
 table.dataTable thead .sorting {
   cursor: pointer;
   *cursor: hand;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+table.dataTable thead .sorting:hover,
+table.dataTable thead .sorting_asc:hover,
+table.dataTable thead .sorting_desc:hover {
+  background: rgba(74, 144, 226, 0.1);
+  color: #4A90E2;
 }
 table.dataTable thead th div.DataTables_sort_wrapper {
   position: relative;
@@ -43,6 +57,7 @@ table.dataTable thead th div.DataTables_sort_wrapper span {
   top: 50%;
   margin-top: -8px;
   right: -5px;
+  color: #4A90E2;
 }
 table.dataTable thead th.ui-state-default {
   border-right-width: 0;
@@ -51,14 +66,19 @@ table.dataTable thead th.ui-state-default:last-child {
   border-right-width: 1px;
 }
 table.dataTable tbody tr {
-  background-color: white;
+  background-color: #FFFFFF;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+table.dataTable tbody tr:hover {
+  background-color: rgba(74, 144, 226, 0.05);
 }
 table.dataTable tbody tr.selected {
-  background-color: #b0bed9;
+  background: linear-gradient(135deg, rgba(74, 144, 226, 0.2) 0%, rgba(123, 104, 238, 0.2) 100%);
 }
 table.dataTable tbody th,
 table.dataTable tbody td {
   padding: 8px 10px;
+  color: #2C3E50;
 }
 table.dataTable th.center,
 table.dataTable td.center,

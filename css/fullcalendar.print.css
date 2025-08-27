@@ -12,6 +12,7 @@
 
 .fc {
 	max-width: 100% !important;
+	color: #000000 !important;
 }
 
 
@@ -19,9 +20,10 @@
 --------------------------------------------------------------------------------------------------*/
 
 .fc-event {
-	background: #fff !important;
+	background: #FFFFFF !important;
 	color: #000 !important;
 	page-break-inside: avoid;
+	border: 1px solid #000000 !important;
 }
 
 .fc-event .fc-resizer {
@@ -38,8 +40,8 @@ hr,
 thead,
 tbody,
 .fc-row {
-	border-color: #ccc !important;
-	background: #fff !important;
+	border-color: #000000 !important;
+	background: #FFFFFF !important;
 }
 
 /* kill the overlaid, absolutely-positioned common components */

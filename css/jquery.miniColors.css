@@ -6,27 +6,33 @@
     margin: 0 .25em;
     display: inline-block;
     outline: none;
+    border-radius: 8px;
+    border: 2px solid #E2E8F0;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.miniColors-trigger:hover {
+    border-color: #4A90E2;
+    box-shadow: 0 0 0 3px rgba(74, 144, 226, 0.1);
 }
 
 .miniColors-selector {
     position: absolute;
     width: 188px;
     height: 162px;
-    background: #FFF;
-    border: solid 1px #BBB;
-    -moz-box-shadow: 0 0 6px rgba(0, 0, 0, .25);
-    -webkit-box-shadow: 0 0 6px rgba(0, 0, 0, .25);
-    box-shadow: 0 0 6px rgba(0, 0, 0, .25);
-    -moz-border-radius: 5px;
-    -webkit-border-radius: 5px;
-    border-radius: 5px;
+    background: #FFFFFF;
+    border: solid 1px #E2E8F0;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
+    border-radius: 12px;
     padding: 5px;
     z-index: 999999;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
 }
 
 .miniColors-selector.black {
-    background: #000;
-    border-color: #000;
+    background: #2C3E50;
+    border-color: #2C3E50;
+    color: #FFFFFF;
 }
 
 .miniColors-colors {
@@ -37,6 +43,7 @@
     height: 150px;
     background: url(../img/miniColors/gradient.png) center no-repeat;
     cursor: crosshair;
+    border-radius: 8px;
 }
 
 .miniColors-hues {
@@ -47,6 +54,7 @@
     height: 150px;
     background: url(../img/miniColors/rainbow.png) center no-repeat;
     cursor: crosshair;
+    border-radius: 8px;
 }
 
 .miniColors-colorPicker {
@@ -54,6 +62,9 @@
     width: 11px;
     height: 11px;
     background: url(../img/miniColors/circle.gif) center no-repeat;
+    border-radius: 50%;
+    border: 2px solid #FFFFFF;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
 }
 
 .miniColors-huePicker {
@@ -62,4 +73,6 @@
     width: 26px;
     height: 3px;
     background: url(../img/miniColors/line.gif) center no-repeat;
+    border-radius: 2px;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
 }

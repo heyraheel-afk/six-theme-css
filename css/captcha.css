@@ -4,6 +4,14 @@
     right: 20px;
     z-index: 9999;
     cursor: pointer;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.captcha-overlay-badge:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
 }
 
 .captcha-overlay-badge-hidden {
@@ -13,6 +21,7 @@
 .captcha-overlay-badge img {
     width: 60px;
     height: auto;
+    border-radius: 8px;
 }
 
 .captcha-overlay-popup {
@@ -20,10 +29,12 @@
     position: fixed;
     bottom: 80px;
     right: 20px;
-    background-color: #fff;
-    border: 1px solid #ccc;
-    padding: 10px;
+    background-color: #FFFFFF;
+    border: 1px solid #E2E8F0;
+    padding: 20px;
     width: 300px;
     z-index: 9998;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
+    border-radius: 12px;
+    color: #2C3E50;
 }

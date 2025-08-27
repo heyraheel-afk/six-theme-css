@@ -18,10 +18,17 @@
 	font-variant: normal;
 	text-transform: none;
 	line-height: 1;
+	color: #4A90E2;
+	transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 
 	/* Better Font Rendering =========== */
 	-webkit-font-smoothing: antialiased;
 	-moz-osx-font-smoothing: grayscale;
+}
+
+[class^="pe-7s-"]:hover, [class*=" pe-7s-"]:hover {
+	color: #7B68EE;
+	transform: scale(1.1);
 }
 
 .pe-7s-album:before {

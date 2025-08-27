@@ -1,27 +1,66 @@
+/* Modern Automation Status - Updated with gradient blue-purple theme */
+
+:root {
+    --primary-gradient: linear-gradient(135deg, #4A90E2 0%, #7B68EE 100%);
+    --primary-color: #4A90E2;
+    --secondary-color: #7B68EE;
+    --text-primary: #2C3E50;
+    --text-secondary: #6C757D;
+    --text-light: #FFFFFF;
+    --bg-light: #F8FAFC;
+    --bg-white: #FFFFFF;
+    --border-color: #E2E8F0;
+    --border-radius: 12px;
+    --border-radius-sm: 8px;
+    --shadow-sm: 0 2px 4px rgba(0, 0, 0, 0.05);
+    --shadow-md: 0 4px 12px rgba(0, 0, 0, 0.1);
+    --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
 .automation-status .day-selector {
     float: right;
     margin-top: -7px;
+    background: var(--bg-white);
+    border-radius: var(--border-radius-sm);
+    box-shadow: var(--shadow-sm);
+    padding: 5px;
 }
+
 .automation-status .day-selector .btn {
     border: 0;
-    color: #aaa;
+    color: var(--text-secondary);
     line-height: 31px;
     font-weight: 300;
+    border-radius: var(--border-radius-sm);
+    transition: var(--transition);
+    margin: 0 2px;
 }
+
 .automation-status .day-selector .btn:hover {
-    color: #555;
+    color: var(--primary-color);
+    background: rgba(74, 144, 226, 0.1);
 }
+
 .automation-status .day-selector .btn.btn-viewing {
     font-size: 1.6em;
+    background: var(--primary-gradient);
+    color: var(--text-light);
+    box-shadow: var(--shadow-sm);
 }
+
 .automation-status .day-selector .btn.disabled {
-    color: #ddd;
+    color: var(--text-secondary);
+    opacity: 0.5;
 }
 
 .automation-status .widgets-container {
     margin-left: -5px;
     margin-right: -5px;
+    background: var(--bg-light);
+    border-radius: var(--border-radius);
+    padding: 15px;
 }
+
 .automation-status .widgets-container div[class^="col-sm-"],
 .automation-status .widgets-container div[class^="col-md-"],
 .automation-status .widgets-container div[class^="col-lg-"] {
@@ -31,34 +70,57 @@
 
 .automation-status .widget {
     margin: 0 0 10px 0;
-    border: 1px solid #eee;
+    border: 1px solid var(--border-color);
+    border-radius: var(--border-radius);
+    box-shadow: var(--shadow-sm);
+    transition: var(--transition);
+    overflow: hidden;
 }
+
+.automation-status .widget:hover {
+    box-shadow: var(--shadow-md);
+    transform: translateY(-2px);
+}
+
 .automation-status .widget .info-container {
-    background: #fff;
-    border-radius: 4px;
+    background: var(--bg-white);
     padding: 12px 15px;
+    position: relative;
 }
+
 .automation-status .widget .info-container i {
-    color: #ccc;
+    color: var(--text-secondary);
+    transition: var(--transition);
 }
+
 .automation-status .widget .info-container .intro {
-    color: #444;
+    color: var(--text-primary);
     margin-bottom: 2px;
-    font-weight: 300;
+    font-weight: 500;
     white-space: nowrap;
     overflow: hidden;
 }
+
 .automation-status .widget .info-container .title {
     margin-top: 0;
     margin-bottom: 0;
+    color: var(--text-primary);
+    font-weight: 600;
 }
+
 .automation-status .widget .info-container .figure {
-    color: #6198d0;
+    color: var(--primary-color);
     font-size: 38px;
     margin: 0;
+    font-weight: 700;
+    background: var(--primary-gradient);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
 }
+
 .automation-status .widget .info-container .note {
-    color: #a2a6af;
+    color: var(--text-secondary);
     font-size: 14px;
     font-weight: 300;
     padding-left: 5px;
@@ -69,143 +131,197 @@
     float: right;
     margin-top: -18px;
     font-size: 0.9em;
-    color: #e48b8b;
+    color: #EF4444;
+    background: rgba(239, 68, 68, 0.1);
+    padding: 4px 8px;
+    border-radius: var(--border-radius-sm);
+    transition: var(--transition);
 }
+
 .automation-status .widget .failed:hover {
     text-decoration: underline;
+    background: rgba(239, 68, 68, 0.2);
 }
 
 .automation-status .widget .info-container i.fa-check {
-    color: #94ca84;
+    color: #10B981;
 }
 
 .automation-status .widget .info-container i.fa-exclamation {
-    color: #ffa500;
+    color: #F59E0B;
 }
 
 .automation-status .widget .info-container small {
     float: right;
     margin-top: -18px;
     font-size: 0.9em;
-    color: #d2d1d1;
+    color: var(--text-secondary);
+    background: var(--bg-light);
+    padding: 2px 6px;
+    border-radius: var(--border-radius-sm);
 }
 
 .automation-status .info-container-boolean p.intro {
     line-height: 23px;
 }
+
 .automation-status .info-container-boolean .status {
     float: left;
     margin-top: -3px;
 }
+
 .automation-status .info-container-boolean .status i {
     font-size: 2em;
+    color: var(--primary-color);
 }
+
 .automation-status .widget .info-container-boolean small {
     margin-top: -20px;
 }
 
 .status-badge-grey {
-    background-color: #bbb;
+    background: linear-gradient(135deg, #6B7280 0%, #4B5563 100%);
+    border-radius: var(--border-radius-sm);
+    color: var(--text-light);
 }
+
 .status-badge-grey .icon {
-    background-color: #999;
+    background-color: #4B5563;
 }
 
 .automation-status .calendar-container {
     padding:15px;
-    background-color:#f8f8f8;
-    border-radius: 4px;
+    background-color: var(--bg-white);
+    border-radius: var(--border-radius);
+    box-shadow: var(--shadow-sm);
+    border: 1px solid var(--border-color);
 }
+
 #automation-status-calendar table {
     width: 100%;
     border-collapse: collapse;
     margin: 0 0 0.4em;
-    font-family: Lucida Grande,Lucida Sans,Arial,sans-serif;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
     font-size: 1.1em;
 }
 
 #automation-status-calendar .datepicker.datepicker-inline {
     margin: 0 0 20px 0;
     background: none;
-    border-radius: 5px;
+    border-radius: var(--border-radius);
 }
+
 #automation-status-calendar .datepicker-inline {
     width: 100%;
     border: 0;
     padding: 0;
 }
+
 #automation-status-calendar th {
     padding: .7em .3em;
     text-align: center;
     font-weight: 700;
     border: 0;
+    color: var(--text-primary);
 }
+
 #automation-status-calendar th.prev,
 #automation-status-calendar th.datepicker-switch,
 #automation-status-calendar th.next {
     background: none;
     border-radius: 0;
     border: 0;
+    color: var(--primary-color);
+    transition: var(--transition);
 }
+
+#automation-status-calendar th.prev:hover,
+#automation-status-calendar th.datepicker-switch:hover,
+#automation-status-calendar th.next:hover {
+    background: rgba(74, 144, 226, 0.1);
+    border-radius: var(--border-radius-sm);
+}
+
 #automation-status-calendar th.datepicker-switch,
 #automation-status-calendar th.today {
-    background-color: #eee;
-    border-radius: 4px;
-    color: #666;
+    background: var(--bg-light);
+    border-radius: var(--border-radius-sm);
+    color: var(--text-primary);
     font-weight: 300;
 }
+
 #automation-status-calendar th.dow {
-    color: #888;
+    color: var(--text-secondary);
 }
+
 #automation-status-calendar .day {
     text-align: center;
     padding: 5px 1px;
-    background: #fff;
-    border-color: #eee;
+    background: var(--bg-white);
+    border-color: var(--border-color);
     border: 0;
-    color: #888;
+    color: var(--text-secondary);
     font-weight: 300;
     font-size: 0.9em;
+    transition: var(--transition);
+    border-radius: var(--border-radius-sm);
+    margin: 1px;
 }
+
+#automation-status-calendar .day:hover {
+    background: rgba(74, 144, 226, 0.1);
+    color: var(--primary-color);
+}
+
 #automation-status-calendar .day.today {
-    background-color: #fde19a;
-    background-image: -moz-linear-gradient(to bottom,#fdd49a,#fdf59a);
-    background-image: -ms-linear-gradient(to bottom,#fdd49a,#fdf59a);
-    background-image: -webkit-gradient(linear,0 0,0 100%,from(#fdd49a),to(#fdf59a));
-    background-image: -webkit-linear-gradient(to bottom,#fdd49a,#fdf59a);
-    background-image: -o-linear-gradient(to bottom,#fdd49a,#fdf59a);
-    background-image: linear-gradient(to bottom,#fdd49a,#fdf59a);
-    background-repeat: repeat-x;
-    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#fdd49a', endColorstr='#fdf59a', GradientType=0);
-    border-color: #fdf59a #fdf59a #fbed50;
-    border-color: rgba(0,0,0,.1) rgba(0,0,0,.1) rgba(0,0,0,.25);
-    filter: progid:DXImageTransform.Microsoft.gradient(enabled=false);
-    color: #000;
+    background: linear-gradient(135deg, #F59E0B 0%, #D97706 100%);
+    color: var(--text-light);
+    font-weight: 600;
 }
+
 #automation-status-calendar .day.active {
-    background: #1a4d80;
-    border-radius: 4px;
-    color: #fff;
+    background: var(--primary-gradient);
+    color: var(--text-light);
+    font-weight: 600;
 }
+
 #automation-status-calendar .day.disabled {
     opacity: .35;
-    filter: Alpha(Opacity=35);
     background-image: none;
+    color: var(--text-secondary);
 }
 
 .automation-status .graph-container {
     margin: 10px 0;
     padding: 30px;
     height: 380px;
-    background-color: #f8f8f8;
+    background-color: var(--bg-white);
+    border-radius: var(--border-radius);
+    box-shadow: var(--shadow-sm);
+    border: 1px solid var(--border-color);
 }
+
 .automation-status .graph-filters {
     margin: -20px -20px 20px 0;
     float: right;
 }
+
 .automation-status .graph-filters .btn-default {
     border: 1px solid transparent;
+    background: var(--bg-white);
+    color: var(--text-primary);
+    border-radius: var(--border-radius-sm);
+    transition: var(--transition);
 }
+
+.automation-status .graph-filters .btn-default:hover {
+    background: rgba(74, 144, 226, 0.1);
+    color: var(--primary-color);
+    border-color: var(--primary-color);
+}
+
 .automation-status .graph-filters a.active {
-    background-color: #fbe7b7;
+    background: var(--primary-gradient);
+    color: var(--text-light);
+    border-color: var(--primary-color);
 }

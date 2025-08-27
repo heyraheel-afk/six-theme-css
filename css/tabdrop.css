@@ -1,3 +1,11 @@
+/* Modern Tab Drop - Updated with gradient blue-purple theme */
+
+:root {
+    --primary-color: #4A90E2;
+    --border-color: #E2E8F0;
+    --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
 /*!
  * Tab drop for Bootstrap
  *
@@ -9,4 +17,19 @@
 .nav-tabs,
 .nav-pills {
   position: relative;
+}
+
+.nav-tabs .dropdown-toggle {
+  border-color: var(--border-color);
+  transition: var(--transition);
+}
+
+.nav-tabs .dropdown-toggle:hover {
+  border-color: var(--primary-color);
+  background: rgba(74, 144, 226, 0.1);
+}
+
+.nav-pills .dropdown-toggle:hover {
+  background: rgba(74, 144, 226, 0.1);
+  color: var(--primary-color);
 }
